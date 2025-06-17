@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// Use the environment variable or fallback to the Railway URL
+const API_URL = process.env.REACT_APP_API_URL || 'https://backendnews-production-0bc6.up.railway.app';
 
 export const api = {
   getCategories: () => axios.get(`${API_URL}/categories`),
